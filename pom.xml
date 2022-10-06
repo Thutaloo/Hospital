@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.techwave.springboot</groupId>
-	<artifactId>masterData</artifactId>
+	<artifactId>Hospital</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>masterData</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Hospital</name>
+	<description>Spring Boot Hospital Project</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
