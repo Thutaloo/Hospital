@@ -1,11 +1,19 @@
 package com.Techwave.Hospital.pojo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Appointment {
     @Id
+    @SequenceGenerator(
+            name = "accountID",
+            sequenceName = "accountID",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "accountID"
+    )
     private int appointmentID;
     private String patientName;
     private String doctorName;

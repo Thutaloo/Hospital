@@ -31,18 +31,6 @@ public class AccountDAO implements IAccountDAO {
     }
 
     @Override
-    public String deleteAccount(Account account) {
-        Account a = accountRepository.findById(account.getAccountID()).get();
-
-        if (a == null) {
-            return "No account found";
-        } else {
-            accountRepository.delete(a);
-            return "Account deleted";
-        }
-    }
-
-    @Override
     public String updateAccount(Account account, int accountID) {
         Account oldAccount = accountRepository.findById(accountID).get();
 

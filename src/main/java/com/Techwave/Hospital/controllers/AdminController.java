@@ -18,7 +18,7 @@ public class AdminController {
         return list;
     }
 
-    @GetMapping("/getByID/{accountID}")
+    @GetMapping("/getAccountByID/{accountID}")
     public Account getAccountByID(@PathVariable("accountID") int accountID) {
         return accountDAO.getByAccountID(accountID);
     }
@@ -26,15 +26,5 @@ public class AdminController {
     @PostMapping("/addAccount")
     public String addAccount(@RequestBody Account account) {
         return accountDAO.insertAccount(account);
-    }
-
-    @PutMapping("/updateAccount/{accountID}")
-    public String updateAccount(@RequestBody Account account, @PathVariable("accountID") int accountID) {
-        return accountDAO.updateAccount(account, accountID);
-    }
-
-    @PutMapping("/updatePassword/{accountID}")
-    public String updatePassword(@RequestBody Account account, @PathVariable("accountID") int accountID) {
-        return accountDAO.updatePassword(account, accountID);
     }
 }

@@ -11,8 +11,6 @@ public interface IAccountDAO {
 
     String insertAccount(Account account);
 
-    String deleteAccount(Account account);
-
     String updateAccount(Account account, int accountID);
 
     String updatePassword(Account account, int accountID);
